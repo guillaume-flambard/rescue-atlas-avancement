@@ -132,7 +132,8 @@ section.block { margin: clamp(28px, 4vw, 44px) 0; }
 .map-card { overflow: hidden; }
 .map-tools { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--tint); }
 .map-body { position: relative; height: min(72vh, 680px); background: radial-gradient(ellipse at 50% 40%, #FBFAFD 0%, #EFEEF4 70%); }
-#graph { position: absolute; inset: 0; }
+/* z-index 0 : les étiquettes 3D restent sous la fiche */
+#graph { position: absolute; inset: 0; z-index: 0; }
 #graph canvas { display: block; }
 .map-note { z-index: 4; position: absolute; left: 16px; bottom: 6px; right: 16px; margin: 0; pointer-events: none; font-size: 13px; color: var(--muted); }
 .map-key { z-index: 4; position: absolute; left: 16px; top: 14px; background: rgba(255,255,255,.86); backdrop-filter: blur(6px); border-radius: var(--radius); padding: 10px 12px; box-shadow: var(--shadow); font-size: 13px; max-width: 230px; }
