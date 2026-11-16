@@ -1,0 +1,56 @@
+---
+import TaskRow from "./TaskRow.astro";
+import { ORDER, STATUS, done, statusOf, type Project } from "../lib/model";
+
+interface Props { project: Project }
+const { project } = Astro.props;
+const current = project.currentMilestone();
+const sprint = project.currentIteration(new Date());
+// Les données partent vers le navigateur dans un bloc JSON ; « < » échappé pour ne jamais fermer la balise.
+const json = JSON.stringify(project.data).replace(/</g, "\\u003c");
+---
+<section class="block" aria-labelledby="h-map">
+  <h2 id="h-map">La carte du projet en 3D</h2>
+  <p class="sub">Au centre, l'objectif du moment. Autour, chaque grand chantier : ses tâches sont des boules de la couleur de leur colonne, et son anneau se remplit à mesure qu'elles sont faites. Les tâches en cours respirent. Un pointillé orange relie une tâche à celle qu'elle débloque. Cliquez sur une tâche pour voir ce qu'elle change.</p>
+  <div class="card map-card" id="map" data-milestone={current?.number} data-milestone-title={current?.title} data-sprint={sprint?.it.title}>
+    <div class="map-tools">
+      <div class="seg" role="group" aria-label="Ce qu'on met en avant">
+        <button type="button" data-focus="all" aria-pressed="true">Tout</button>
+        {current && <button type="button" data-focus="ms" aria-pressed="false">{current.title}</button>}
+        {sprint && <button type="button" data-focus="sprint" aria-pressed="false">Le sprint</button>}
+      </div>
+      <div class="seg" role="group" aria-label="Affichage">
+        <button type="button" data-view="3d" aria-pressed="false">3D</button>
+        <button type="button" data-view="list" aria-pressed="false">Liste</button>
+      </div>
+    </div>
+    <div class="map-body" id="map-body">
+      <div id="graph"><div class="loading-map">Préparation de la carte…</div></div>
+      <div class="map-key">
+        <ul>{ORDER.filter((k) => k !== "none").map((k) => <li style={`--c:${STATUS[k].hex}`}>{STATUS[k].label}</li>)}</ul>
+        <div class="lk"><span>Anneau : la part faite du chantier</span><span><i class="b"></i>débloque</span></div>
+      </div>
+      <p class="map-note">Glisser pour tourner, molette pour zoomer, clic sur une boule pour le détail.</p>
+      <aside class="panel" id="panel" aria-live="polite"></aside>
+    </div>
+    <div class="tree" id="tree" hidden>
+      {project.groups().map((g, ix) => {
+        const items = [...g.items].sort((a, b) => STATUS[statusOf(a)].order - STATUS[statusOf(b)].order);
+        return items.length > 0 && (
+          <details open={ix === 0} data-group>
+            <summary>{g.name}<span>{done(items)} sur {items.length} faites</span></summary>
+            <ol class="list">
+              {items.map((i) => <TaskRow issue={i} filterable />)}
+            </ol>
+          </details>
+        );
+      })}
+    </div>
+  </div>
+  <script type="application/json" id="atlas-data" set:html={json} />
+</section>
+
+<script>
+  import { setupMap } from "../scripts/map";
+  setupMap();
+</script>

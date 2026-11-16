@@ -1,16 +1,177 @@
 ---
----
+import Layout from "../layouts/Layout.astro";
+import StatusBar from "../components/StatusBar.astro";
+import Burnup from "../components/Burnup.astro";
+import TaskRow from "../components/TaskRow.astro";
+import ProjectMap from "../components/ProjectMap.astro";
+import data from "../data/data.json";
+import { DAY, Project, STATUS, cleanEpic, done, dueDay, pct, statusOf, type Snapshot } from "../lib/model";
+import { dayLong, dayTiny, hour, plural } from "../lib/format";
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+const project = new Project(data as Snapshot);
+const now = new Date();
+const current = project.currentMilestone();
+const milestones = project.data.milestones.filter((m) => m.state === "OPEN" || project.inMilestone(m.number).length);
+
+const goal = current ? project.inMilestone(current.number) : [];
+const goalDone = done(goal);
+const due = current?.dueOn ? dueDay(current.dueOn) : null;
+const week = goal.filter((i) => i.closedAt && +now - +new Date(i.closedAt) < 7 * DAY).length;
+const going = goal.filter((i) => ["In progress", "In review"].includes(statusOf(i))).length;
+const ready = goal.filter((i) => statusOf(i) === "Ready").length;
+
+const sprint = project.currentIteration(now);
+const sprintTasks = sprint
+  ? project.work.filter((i) => i.iteration === sprint.it.title).sort((a, b) => STATUS[statusOf(a)].order - STATUS[statusOf(b)].order)
+  : [];
+
+const since = new Date(+now - 7 * DAY);
+const events = project.feed(since).slice(0, 14);
+const created = project.data.issues.filter((i) => new Date(i.createdAt) > since).length;
+const snap = `Photo de GitHub du ${dayLong(project.data.generated_at)} à ${hour(project.data.generated_at)}`;
+---
+<Layout title="Rescue Atlas, l'avancement" description="Où en est Rescue Atlas : les objectifs, le sprint, les grands chantiers et la carte 3D de toutes les tâches, lus sur GitHub.">
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">RESCUE ATLAS <span aria-hidden="true">/</span> AVANCEMENT</div>
+      <div class="snap">{snap}</div>
+      <a href={project.data.project}>Le tableau GitHub</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="intro">
+      <h1>Où en est le projet</h1>
+      <p>Les objectifs, ce qui avance cette semaine et la carte de toutes les tâches. Tout vient du tableau GitHub de l'équipe : quand une tâche change de colonne, la page suit.</p>
+    </div>
+
+    {current && (
+      <section class="block" aria-labelledby="h-goal">
+        <h2 id="h-goal" class="visually-hidden">L'objectif du moment</h2>
+        <div class="card hero">
+          <div class="hero-main">
+            <p class="kicker">Objectif du moment : {current.title}</p>
+            <div class="score"><span class="big">{goalDone}</span><span class="of">sur {plural(goal.length, "tâche faite", "tâches faites")}</span></div>
+            {due && <p class="days" data-due={due.toISOString()}>{dayLong(due)}</p>}
+            <p class="lede">
+              {plural(goal.length - goalDone, "tâche reste", "tâches restent")} à faire. Ces 7 derniers jours, {plural(week, "tâche finie", "tâches finies")}.
+              En ce moment, {going} en cours ou en relecture, et {ready} {ready > 1 ? "prêtes" : "prête"} à prendre.
+            </p>
+            <StatusBar list={goal} legend />
+          </div>
+          <div class="hero-chart">
+            <div class="chart-head">
+              <h3>La progression jour par jour</h3>
+              <div class="seg" role="group" aria-label="Périmètre de la courbe">
+                <button type="button" data-scope="bu-goal" aria-pressed="true">{current.title}</button>
+                <button type="button" data-scope="bu-all" aria-pressed="false">Tout le projet</button>
+              </div>
+            </div>
+            <Burnup project={project} list={goal} due={due} now={now} id="bu-goal" />
+            <Burnup project={project} list={project.work} due={null} now={now} id="bu-all" hidden />
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="block" aria-labelledby="h-ms">
+      <h2 id="h-ms">Les objectifs fixés</h2>
+      <p class="sub">Chaque jalon du dépôt, avec sa date et les tâches qu'il contient.</p>
+      <div class="grid-ms">
+        {milestones.map((m) => {
+          const list = project.inMilestone(m.number);
+          return (
+            <article class:list={["card", "ms", { current: m.number === current?.number }]}>
+              <h3>{m.title}</h3>
+              <p class="due">{m.dueOn ? `Pour le ${dayLong(dueDay(m.dueOn))}` : "Sans date"}</p>
+              <p class="count"><b>{done(list)}</b> sur {list.length} faites · {pct(done(list), list.length)} %</p>
+              <StatusBar list={list} thin />
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="two">
+        <div class="card" aria-labelledby="h-sprint">
+          <div class="card-head">
+            <h3 id="h-sprint">Le sprint en cours</h3>
+            <p>{sprint ? `${sprint.it.title.replace("Iteration", "Itération")}, du ${dayLong(sprint.start)} au ${dayLong(sprint.end)}` : "Aucune itération en cours sur le tableau."}</p>
+          </div>
+          {sprintTasks.length ? (
+            <>
+              <StatusBar list={sprintTasks} thin style="margin:6px 20px 8px" />
+              <ul class="list">{sprintTasks.map((i) => <TaskRow issue={i} />)}</ul>
+            </>
+          ) : <p class="state">Aucune tâche n'est rangée dans ce sprint.</p>}
+        </div>
+        <div class="card" aria-labelledby="h-epics">
+          <div class="card-head">
+            <h3 id="h-epics">Les grands chantiers</h3>
+            <p>Les épopées du projet et toutes les tâches rangées dessous.</p>
+          </div>
+          {project.epics.map((e) => {
+            const list = project.tasksOf(e.number);
+            return (
+              <div class="epic">
+                <div class="epic-top"><a href={e.url}>{cleanEpic(e.title)}</a><span>{list.length ? `${done(list)} sur ${list.length} faites` : "pas encore découpé en tâches"}</span></div>
+                {list.length > 0 && <StatusBar list={list} thin />}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <ProjectMap project={project} />
+
+    <section class="block" aria-labelledby="h-feed">
+      <h2 id="h-feed">Ce qui a bougé ces 7 derniers jours</h2>
+      <p class="sub">{plural(created, "nouvelle tâche décrite", "nouvelles tâches décrites")} sur la période, en plus de ce qui suit.</p>
+      <div class="card">
+        {events.length ? (
+          <ul class="feed">
+            {events.map((e) => (
+              <li>
+                <time datetime={e.at}>{dayTiny(e.at)}</time>
+                <div class="what" style={`--c:${STATUS[e.kind].hex}`}>
+                  <b>{e.what}</b> <a href={e.url}>{e.title}</a>
+                  {e.who && <small>par {e.who}</small>}
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : <p class="state">Rien n'a bougé cette semaine.</p>}
+      </div>
+    </section>
+  </main>
+
+  <div class="wrap">
+    <footer>
+      <p>Source : <a href={project.data.project}>le tableau Mediterranean Rescue</a> et <a href={project.data.repo}>le dépôt public</a>, lus le {dayLong(project.data.generated_at)}.</p>
+      <p>Le statut d'une tâche est la colonne du tableau. Une tâche fermée compte comme faite. Une tâche fermée comme « pas prévue » n'est pas comptée.</p>
+      <p>Document de travail · bénévoles Data for Good · non validé par SOS MEDITERRANEE</p>
+    </footer>
+  </div>
+</Layout>
+
+<script>
+  // Le compte à rebours se calcule à l'ouverture de la page, pas au moment de la photo.
+  for (const el of document.querySelectorAll<HTMLElement>("[data-due]")) {
+    const due = new Date(el.dataset.due!);
+    const left = Math.ceil((+due - Date.now()) / 86_400_000);
+    const date = el.textContent;
+    el.innerHTML = left > 0
+      ? `<strong>${left} jour${left > 1 ? "s" : ""}</strong> avant le ${date}`
+      : left === 0 ? `<strong>C'est aujourd'hui</strong>, le ${date}` : `Échéance passée depuis le ${date}`;
+  }
+  // La courbe : l'objectif du moment ou tout le projet
+  const buttons = document.querySelectorAll<HTMLButtonElement>("[data-scope]");
+  for (const b of buttons) b.addEventListener("click", () => {
+    for (const x of buttons) {
+      x.setAttribute("aria-pressed", String(x === b));
+      document.getElementById(x.dataset.scope!)!.hidden = x !== b;
+    }
+  });
+</script>

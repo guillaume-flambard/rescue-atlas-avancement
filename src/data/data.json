@@ -1,0 +1,2841 @@
+{
+ "generated_at": "2026-11-16T19:52:11+00:00",
+ "repo": "https://github.com/dataforgoodfr/mediterranean-rescue",
+ "project": "https://github.com/orgs/dataforgoodfr/projects/44",
+ "milestones": [
+  {
+   "number": 2,
+   "title": "P0 · MVP",
+   "dueOn": "2026-11-30T00:00:00Z",
+   "state": "OPEN",
+   "description": "Horizon 1, réparer. Le parcours de la donnée clarifié (sources, cibles, étapes), le back-office et le Monster mis à l'essai, la stack figée, la carte recentrée sur la Méditerranée (zones SRR, ports, un point par opération, un lien court vers chacune), l'avertissement pour les familles. Ligne P0 de la storymap."
+  },
+  {
+   "number": 3,
+   "title": "P1",
+   "dueOn": "2026-12-31T00:00:00Z",
+   "state": "OPEN",
+   "description": "Horizon 1, élever, « cadeau de Noël ». La carte telle qu'aujourd'hui, la liste des pays automatisée, la publication du logbook sur le web automatisée. Ligne P1 de la storymap."
+  },
+  {
+   "number": 4,
+   "title": "P2",
+   "dueOn": "2027-01-31T00:00:00Z",
+   "state": "OPEN",
+   "description": "Horizon 2, enrichir pour le plaidoyer et la levée de fonds. Le déclenchement de la mise à jour de la carte. Ligne P2 de la storymap."
+  },
+  {
+   "number": 5,
+   "title": "P3",
+   "dueOn": "2027-02-28T00:00:00Z",
+   "state": "OPEN",
+   "description": "Horizon 2. La version arabe du site. Ligne P3 de la storymap."
+  }
+ ],
+ "iterations": [
+  {
+   "title": "Iteration 1",
+   "startDate": "2026-11-16",
+   "duration": 12
+  },
+  {
+   "title": "Iteration 2",
+   "startDate": "2026-11-28",
+   "duration": 14
+  },
+  {
+   "title": "Iteration 3",
+   "startDate": "2026-12-12",
+   "duration": 14
+  },
+  {
+   "title": "Iteration 4",
+   "startDate": "2027-01-04",
+   "duration": 12
+  },
+  {
+   "title": "Iteration 5",
+   "startDate": "2027-01-16",
+   "duration": 14
+  },
+  {
+   "title": "Iteration 6",
+   "startDate": "2027-01-30",
+   "duration": 14
+  },
+  {
+   "title": "Iteration 7",
+   "startDate": "2027-02-13",
+   "duration": 14
+  },
+  {
+   "title": "Iteration 8",
+   "startDate": "2027-02-27",
+   "duration": 14
+  }
+ ],
+ "issues": [
+  {
+   "number": 2,
+   "title": "Inventaire des deliverables et structures (DATA-01)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/2",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "In progress",
+   "size": "S",
+   "iteration": "Iteration 1",
+   "milestone": 2,
+   "parent": 11,
+   "labels": [
+    "niveau-2",
+    "data",
+    "as-is"
+   ],
+   "assignees": [
+    {
+     "login": "sam-batouk",
+     "avatar": "https://avatars.githubusercontent.com/u/8367801?u=b52ccb3646fb44b15d1b254428812edd948bd730&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-04T15:13:39Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:41:16Z"
+  },
+  {
+   "number": 3,
+   "title": "Automatisation des pays depuis les survival forms",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/3",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Refinement",
+   "size": "S",
+   "iteration": null,
+   "milestone": 3,
+   "parent": 11,
+   "labels": [
+    "back",
+    "data",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-04T15:14:33Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:41:31Z"
+  },
+  {
+   "number": 4,
+   "title": "Écrire un jeu de données fictif au format de la carte actuelle (DATA-07)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/4",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "In progress",
+   "size": "S",
+   "iteration": "Iteration 1",
+   "milestone": 2,
+   "parent": 27,
+   "labels": [
+    "niveau-2",
+    "back",
+    "data"
+   ],
+   "assignees": [
+    {
+     "login": "NicolasGrosjean",
+     "avatar": "https://avatars.githubusercontent.com/u/13560473?u=87f149a2a951c480d25539e4d4cb20a181f5954d&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-04T15:14:43Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-14T16:16:09Z"
+  },
+  {
+   "number": 5,
+   "title": "Créer le modèle des opérations dans Postgres (DATA-07)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/5",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Ready",
+   "size": "M",
+   "iteration": null,
+   "milestone": 2,
+   "parent": 11,
+   "labels": [
+    "niveau-2",
+    "back"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    4
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-04T15:14:49Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-16T08:30:12Z"
+  },
+  {
+   "number": 6,
+   "title": "Exposer les opérations dans l'API : GET /api/operations",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/6",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Ready",
+   "size": "S",
+   "iteration": null,
+   "milestone": 2,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "back",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    105,
+    5
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-04T15:14:55Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-16T09:04:52Z"
+  },
+  {
+   "number": 7,
+   "title": "Une page qui montre le design system",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/7",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": "Task",
+   "status": "Done",
+   "size": "S",
+   "iteration": "Iteration 1",
+   "milestone": 2,
+   "parent": 12,
+   "labels": [
+    "good first issue",
+    "front"
+   ],
+   "assignees": [
+    {
+     "login": "naderhaj",
+     "avatar": "https://avatars.githubusercontent.com/u/1637444?u=038245a5a40d0682566483d2d990344281404fee&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-04T15:15:00Z",
+   "closedAt": "2026-11-13T16:31:02Z",
+   "updatedAt": "2026-11-13T16:31:02Z"
+  },
+  {
+   "number": 8,
+   "title": "Afficher la carte MapLibre : fond, zones SAR et ports",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/8",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Ready",
+   "size": "M",
+   "iteration": null,
+   "milestone": 2,
+   "parent": 12,
+   "labels": [
+    "niveau-3",
+    "front"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    105,
+    92
+   ],
+   "subs": {
+    "total": 1,
+    "completed": 0
+   },
+   "createdAt": "2026-11-04T15:15:12Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-16T08:46:41Z"
+  },
+  {
+   "number": 9,
+   "title": "Afficher les opérations sur la carte, avec leur fiche",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/9",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Ready",
+   "size": "M",
+   "iteration": null,
+   "milestone": 2,
+   "parent": 12,
+   "labels": [
+    "niveau-3",
+    "front",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    92,
+    8,
+    6
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-04T15:15:18Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-16T09:04:54Z"
+  },
+  {
+   "number": 11,
+   "title": "Épopée : Data management",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/11",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Epic",
+   "status": "Ready",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [
+    {
+     "login": "sam-batouk",
+     "avatar": "https://avatars.githubusercontent.com/u/8367801?u=b52ccb3646fb44b15d1b254428812edd948bd730&v=4"
+    }
+   ],
+   "blockedBy": [
+    108
+   ],
+   "subs": {
+    "total": 28,
+    "completed": 2
+   },
+   "createdAt": "2026-11-05T13:47:41Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T08:15:07Z"
+  },
+  {
+   "number": 12,
+   "title": "Épopée : Transparence",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/12",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Epic",
+   "status": "Ready",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "front",
+    "back",
+    "data",
+    "back-office",
+    "as-is"
+   ],
+   "assignees": [
+    {
+     "login": "sam-batouk",
+     "avatar": "https://avatars.githubusercontent.com/u/8367801?u=b52ccb3646fb44b15d1b254428812edd948bd730&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 30,
+    "completed": 1
+   },
+   "createdAt": "2026-11-05T13:47:42Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T08:15:43Z"
+  },
+  {
+   "number": 13,
+   "title": "Épopée : Plaidoyer",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/13",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Epic",
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "front",
+    "data"
+   ],
+   "assignees": [
+    {
+     "login": "sam-batouk",
+     "avatar": "https://avatars.githubusercontent.com/u/8367801?u=b52ccb3646fb44b15d1b254428812edd948bd730&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 4,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T13:47:43Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T08:15:59Z"
+  },
+  {
+   "number": 14,
+   "title": "Épopée : Levée de fonds",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/14",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Epic",
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "front",
+    "data"
+   ],
+   "assignees": [
+    {
+     "login": "sam-batouk",
+     "avatar": "https://avatars.githubusercontent.com/u/8367801?u=b52ccb3646fb44b15d1b254428812edd948bd730&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T13:47:44Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T08:16:14Z"
+  },
+  {
+   "number": 15,
+   "title": "Épopée : Cybersécurité",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/15",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Epic",
+   "status": "Ready",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "front",
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [
+    {
+     "login": "sam-batouk",
+     "avatar": "https://avatars.githubusercontent.com/u/8367801?u=b52ccb3646fb44b15d1b254428812edd948bd730&v=4"
+    },
+    {
+     "login": "jrobert2",
+     "avatar": "https://avatars.githubusercontent.com/u/22345479?v=4"
+    },
+    {
+     "login": "guillaume-flambard",
+     "avatar": "https://avatars.githubusercontent.com/u/56681566?u=8433ca2de983ec07b285adeea908804c8bc5bf76&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 6,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T13:47:45Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T08:16:28Z"
+  },
+  {
+   "number": 16,
+   "title": "SOS Med data journey",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/16",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "In progress",
+   "size": "S",
+   "iteration": "Iteration 1",
+   "milestone": 2,
+   "parent": 11,
+   "labels": [
+    "niveau-2",
+    "data",
+    "docs",
+    "as-is"
+   ],
+   "assignees": [
+    {
+     "login": "sam-batouk",
+     "avatar": "https://avatars.githubusercontent.com/u/8367801?u=b52ccb3646fb44b15d1b254428812edd948bd730&v=4"
+    }
+   ],
+   "blockedBy": [
+    2
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T15:25:30Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:41:52Z"
+  },
+  {
+   "number": 17,
+   "title": "Un lien court vers chaque opération",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/17",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Ready",
+   "size": "S",
+   "iteration": null,
+   "milestone": 2,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "front"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    9
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T15:25:35Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-16T09:04:56Z"
+  },
+  {
+   "number": 18,
+   "title": "Disclaimer pour les familles",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/18",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Refinement",
+   "size": "S",
+   "iteration": null,
+   "milestone": 2,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "front"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    9
+   ],
+   "subs": {
+    "total": 1,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T15:25:42Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-16T09:05:17Z"
+  },
+  {
+   "number": 19,
+   "title": "Le back-office : vérifier et corriger la donnée sans SharePoint",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/19",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Refinement",
+   "size": "L",
+   "iteration": null,
+   "milestone": 2,
+   "parent": 11,
+   "labels": [
+    "niveau-3",
+    "bloquée",
+    "front",
+    "back"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    21
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T15:25:47Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-05T21:37:58Z"
+  },
+  {
+   "number": 20,
+   "title": "Canvas « The Monster » (main rescue data sheet) dans Postgres",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/20",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Refinement",
+   "size": "M",
+   "iteration": null,
+   "milestone": 2,
+   "parent": 11,
+   "labels": [
+    "niveau-3",
+    "bloquée",
+    "back",
+    "data",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    2
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T15:25:53Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T14:22:30Z"
+  },
+  {
+   "number": 21,
+   "title": "Figer la stack technique",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/21",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": "Task",
+   "status": "Done",
+   "size": "XS",
+   "iteration": null,
+   "milestone": 2,
+   "parent": 11,
+   "labels": [
+    "niveau-3",
+    "back",
+    "docs"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T15:25:59Z",
+   "closedAt": "2026-11-12T17:38:30Z",
+   "updatedAt": "2026-11-12T17:38:30Z"
+  },
+  {
+   "number": 22,
+   "title": "Publier le journal de bord sur le web sans le ressaisir",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/22",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Refinement",
+   "size": "L",
+   "iteration": null,
+   "milestone": 3,
+   "parent": 11,
+   "labels": [
+    "niveau-3",
+    "bloquée",
+    "back",
+    "data",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T15:26:04Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:42:12Z"
+  },
+  {
+   "number": 23,
+   "title": "Trigger de mise à jour de la carto",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/23",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Refinement",
+   "size": "M",
+   "iteration": null,
+   "milestone": 4,
+   "parent": 12,
+   "labels": [
+    "niveau-3",
+    "back",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T15:26:11Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-05T23:02:09Z"
+  },
+  {
+   "number": 24,
+   "title": "La carte en version arabe",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/24",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Ready",
+   "size": "M",
+   "iteration": null,
+   "milestone": 5,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "front",
+    "traduction"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T15:26:18Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T20:23:06Z"
+  },
+  {
+   "number": 25,
+   "title": "Mettre en place le socle du dépôt",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/25",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": "Task",
+   "status": "Done",
+   "size": null,
+   "iteration": null,
+   "milestone": 2,
+   "parent": 77,
+   "labels": [
+    "niveau-3",
+    "ci"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T16:08:45Z",
+   "closedAt": "2026-11-06T10:45:29Z",
+   "updatedAt": "2026-11-06T10:45:29Z"
+  },
+  {
+   "number": 26,
+   "title": "Contrôle d'accès par rôles (RBAC)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/26",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 15,
+   "labels": [
+    "niveau-2",
+    "bloquée",
+    "back",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T20:21:37Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T13:24:55Z"
+  },
+  {
+   "number": 27,
+   "title": "Jeu de données fictives",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/27",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 15,
+   "labels": [
+    "good first issue",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 1,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T20:26:57Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T17:26:25Z"
+  },
+  {
+   "number": 28,
+   "title": "Journal d'audit",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/28",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 15,
+   "labels": [
+    "niveau-3",
+    "back",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T20:29:07Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:17:36Z"
+  },
+  {
+   "number": 29,
+   "title": "Intégrité vérifiable des mises à jour (nouvelle, réponse directe au risque réputationnel)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/29",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 15,
+   "labels": [
+    "niveau-3",
+    "back",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T20:30:42Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:17:56Z"
+  },
+  {
+   "number": 30,
+   "title": "Plan de réponse aux incidents",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/30",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 15,
+   "labels": [
+    "niveau-3",
+    "docs",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T20:32:02Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:18:17Z"
+  },
+  {
+   "number": 32,
+   "title": "Lien LogBook ↔ glossaire",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/32",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "niveau-2",
+    "front",
+    "docs",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T21:17:23Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:42:22Z"
+  },
+  {
+   "number": 33,
+   "title": "Validation avant publication",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/33",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "niveau-3",
+    "back",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T21:19:08Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T14:52:59Z"
+  },
+  {
+   "number": 34,
+   "title": "Alerte d'échec de mise à jour",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/34",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "niveau-2",
+    "back",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T21:20:02Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:20:04Z"
+  },
+  {
+   "number": 35,
+   "title": "Sourçage visible",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/35",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Ready",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "front"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    9
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T23:04:46Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-13T08:09:36Z"
+  },
+  {
+   "number": 36,
+   "title": "Page méthodologie",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/36",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "front",
+    "docs"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T23:06:32Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T18:04:27Z"
+  },
+  {
+   "number": 37,
+   "title": "Indicateur de fraîcheur",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/37",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Ready",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "good first issue",
+    "front"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    83
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T23:08:02Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T13:35:51Z"
+  },
+  {
+   "number": 38,
+   "title": "Téléchargement des données",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/38",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "front",
+    "back"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T23:09:46Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:21:24Z"
+  },
+  {
+   "number": 39,
+   "title": "Affichage mobile-first",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/39",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "bloquée",
+    "front"
+   ],
+   "assignees": [
+    {
+     "login": "sam-batouk",
+     "avatar": "https://avatars.githubusercontent.com/u/8367801?u=b52ccb3646fb44b15d1b254428812edd948bd730&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T23:10:59Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T14:17:33Z"
+  },
+  {
+   "number": 40,
+   "title": "Termes cliquables vers le glossaire",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/40",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "front"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-05T23:14:26Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:21:50Z"
+  },
+  {
+   "number": 41,
+   "title": "Corriger cinq points relevés à la relecture du socle",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/41",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": null,
+   "status": "Done",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 77,
+   "labels": [],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-06T10:47:42Z",
+   "closedAt": "2026-11-06T16:43:13Z",
+   "updatedAt": "2026-11-06T16:43:13Z"
+  },
+  {
+   "number": 43,
+   "title": "Passer le code du socle en anglais",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/43",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": null,
+   "status": "Done",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 77,
+   "labels": [],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-06T14:27:53Z",
+   "closedAt": "2026-11-06T16:47:07Z",
+   "updatedAt": "2026-11-06T16:47:07Z"
+  },
+  {
+   "number": 45,
+   "title": "Mettre la langue dans l'adresse (/en, /fr, /it…) pour toutes les langues",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/45",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "front"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-06T14:33:19Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-06T14:41:32Z"
+  },
+  {
+   "number": 47,
+   "title": "Corriger les petits défauts du socle avant l'arrivée des bénévoles",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/47",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": null,
+   "status": "Done",
+   "size": null,
+   "iteration": "Iteration 1",
+   "milestone": null,
+   "parent": 77,
+   "labels": [
+    "niveau-2",
+    "front",
+    "back"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-09T10:35:12Z",
+   "closedAt": "2026-11-12T20:30:34Z",
+   "updatedAt": "2026-11-12T20:30:34Z"
+  },
+  {
+   "number": 49,
+   "title": "Ouvrir un espace pocs/ pour les essais des bénévoles",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/49",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": null,
+   "status": "Done",
+   "size": null,
+   "iteration": "Iteration 1",
+   "milestone": null,
+   "parent": 77,
+   "labels": [
+    "docs"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T10:27:48Z",
+   "closedAt": "2026-11-12T20:30:18Z",
+   "updatedAt": "2026-11-12T20:30:18Z"
+  },
+  {
+   "number": 51,
+   "title": "Publier les enregistrements audio de l'Albatros",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/51",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "niveau-3",
+    "front",
+    "back",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T14:19:23Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T14:19:23Z"
+  },
+  {
+   "number": 52,
+   "title": "Extraction du glossaire en format JSON",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/52",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "back",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T14:28:51Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T14:28:51Z"
+  },
+  {
+   "number": 53,
+   "title": "Extraction du WebLogBook (version simplifiée du logbook publiée sur le web)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/53",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-3",
+    "front",
+    "back",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T14:31:01Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T14:31:01Z"
+  },
+  {
+   "number": 54,
+   "title": "Audiométrie des mots-clés recherchés",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/54",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "niveau-2",
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T14:48:05Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T14:48:05Z"
+  },
+  {
+   "number": 55,
+   "title": "Gestion des droits par profils (data-provider, data-broadcaster, data-manager)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/55",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Feature",
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "niveau-2",
+    "back",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    26
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T14:50:32Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T14:50:32Z"
+  },
+  {
+   "number": 56,
+   "title": "Dataviz pour le plaidoyer",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/56",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "back",
+    "data",
+    "back-office",
+    "poc"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T14:53:01Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T18:09:59Z"
+  },
+  {
+   "number": 57,
+   "title": "Ajouter photos et vidéos aux opérations",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/57",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "front",
+    "back",
+    "data",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T15:10:23Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:43:43Z"
+  },
+  {
+   "number": 58,
+   "title": "Lire les positions écrites dans le texte du journal de bord",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/58",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Ready",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "niveau-3",
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:19:27Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T11:39:24Z"
+  },
+  {
+   "number": 59,
+   "title": "Enquête : le journal de bord et les rapports italiens disent-ils la même chose ?",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/59",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:22:07Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T17:22:58Z"
+  },
+  {
+   "number": 60,
+   "title": "Enquête : trouver les vitesses impossibles dans le journal de bord",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/60",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:23:36Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T17:24:04Z"
+  },
+  {
+   "number": 61,
+   "title": "Retrouver le bon port derrière chaque écriture de l'ancienne carte",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/61",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Ready",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-3",
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:27:55Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T11:39:42Z"
+  },
+  {
+   "number": 62,
+   "title": "Charger l'ancienne carte (2016 à 2024) dans la base",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/62",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:31:01Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T17:31:29Z"
+  },
+  {
+   "number": 63,
+   "title": "Signaler les opérations à moins de 12 milles d'une côte",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/63",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "niveau-3",
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:32:01Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T15:02:03Z"
+  },
+  {
+   "number": 64,
+   "title": "Ton premier POC : les 370 opérations de l'ancienne carte sur une carte",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/64",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Ready",
+   "size": null,
+   "iteration": "Iteration 1",
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "data"
+   ],
+   "assignees": [
+    {
+     "login": "chiarapinto",
+     "avatar": "https://avatars.githubusercontent.com/u/48326672?v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:32:43Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-16T09:04:51Z"
+  },
+  {
+   "number": 65,
+   "title": "Convertir une position degrés-minutes en degrés décimaux",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/65",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Ready",
+   "size": null,
+   "iteration": "Iteration 1",
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "good first issue",
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [
+    {
+     "login": "MintTea-M",
+     "avatar": "https://avatars.githubusercontent.com/u/305556036?u=2fd3f15a2687cfbf233a7def344f41ba80e446bc&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:33:20Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T14:46:42Z"
+  },
+  {
+   "number": 66,
+   "title": "Lire les dates de l'ancienne carte",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/66",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:33:55Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T17:34:17Z"
+  },
+  {
+   "number": 67,
+   "title": "Charger les opérations du journal de bord (depuis février 2024) dans la base",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/67",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-10T17:34:30Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-10T17:34:41Z"
+  },
+  {
+   "number": 68,
+   "title": "Le bilan cumulé des opérations de recherche et de sauvetage",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/68",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "front",
+    "data",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    92
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-11T09:29:24Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:30:05Z"
+  },
+  {
+   "number": 69,
+   "title": "Retrouver une opération par mot-clé ou par événement",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/69",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-3",
+    "front",
+    "back",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-11T09:33:22Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:33:22Z"
+  },
+  {
+   "number": 70,
+   "title": "Retrouver une opération par date (lieu, port de débarquement)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/70",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "front",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-11T09:35:54Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:35:54Z"
+  },
+  {
+   "number": 71,
+   "title": "Les informations sur le navire (qui va bientôt changer)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/71",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "front",
+    "docs",
+    "as-is"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-11T09:37:57Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T09:37:57Z"
+  },
+  {
+   "number": 72,
+   "title": "Le détail d'un événement (tirs, personnes non secourues…)",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/72",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 13,
+   "labels": [
+    "niveau-3",
+    "front",
+    "back",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    94,
+    93
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-11T11:02:46Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T14:49:37Z"
+  },
+  {
+   "number": 73,
+   "title": "Le comportement des autres acteurs face au droit international",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/73",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 13,
+   "labels": [
+    "niveau-3",
+    "front",
+    "back",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-11T11:05:20Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T11:05:20Z"
+  },
+  {
+   "number": 74,
+   "title": "Le droit international et les politiques européennes qui pèsent sur le sauvetage",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/74",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 13,
+   "labels": [
+    "niveau-2",
+    "front",
+    "docs"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-11T11:06:51Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T11:06:51Z"
+  },
+  {
+   "number": 75,
+   "title": "Lancer les tests du backend sur Postgres dans la CI",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/75",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": null,
+   "status": "Done",
+   "size": null,
+   "iteration": "Iteration 1",
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "niveau-2",
+    "back",
+    "ci",
+    "back-office"
+   ],
+   "assignees": [
+    {
+     "login": "naderhaj",
+     "avatar": "https://avatars.githubusercontent.com/u/1637444?u=038245a5a40d0682566483d2d990344281404fee&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-11T11:42:32Z",
+   "closedAt": "2026-11-15T14:30:38Z",
+   "updatedAt": "2026-11-15T14:30:38Z"
+  },
+  {
+   "number": 76,
+   "title": "Revue de sécurité et test d'intrusion avant la relance publique",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/76",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 15,
+   "labels": [
+    "niveau-3",
+    "back",
+    "data",
+    "back-office"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-11T13:00:44Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-11T13:00:44Z"
+  },
+  {
+   "number": 77,
+   "title": "Épopée : Socle",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/77",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Epic",
+   "status": "In progress",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "niveau-3",
+    "back"
+   ],
+   "assignees": [
+    {
+     "login": "jrobert2",
+     "avatar": "https://avatars.githubusercontent.com/u/22345479?v=4"
+    },
+    {
+     "login": "guillaume-flambard",
+     "avatar": "https://avatars.githubusercontent.com/u/56681566?u=8433ca2de983ec07b285adeea908804c8bc5bf76&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 7,
+    "completed": 5
+   },
+   "createdAt": "2026-11-12T07:48:56Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-12T07:48:56Z"
+  },
+  {
+   "number": 82,
+   "title": "Générer le GeoJSON des eaux territoriales de la Méditerranée centrale",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/82",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "In progress",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "niveau-2",
+    "data"
+   ],
+   "assignees": [
+    {
+     "login": "naderhaj",
+     "avatar": "https://avatars.githubusercontent.com/u/1637444?u=038245a5a40d0682566483d2d990344281404fee&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-13T08:31:40Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-16T19:11:32Z"
+  },
+  {
+   "number": 83,
+   "title": "Exemple Design : Wireframe de la page principale de la carte",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/83",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Task",
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 8,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-13T11:26:41Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T21:01:15Z"
+  },
+  {
+   "number": 85,
+   "title": "Renvoyer vers le design system depuis CONTRIBUTING",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/85",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": null,
+   "status": "Done",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "front",
+    "docs"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-13T17:38:15Z",
+   "closedAt": "2026-11-15T14:31:18Z",
+   "updatedAt": "2026-11-15T14:31:18Z"
+  },
+  {
+   "number": 87,
+   "title": "Mettre CONTRIBUTING et TECHNICAL à jour des décisions",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/87",
+   "state": "CLOSED",
+   "stateReason": "COMPLETED",
+   "type": null,
+   "status": "Done",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "docs"
+   ],
+   "assignees": [
+    {
+     "login": "guillaume-flambard",
+     "avatar": "https://avatars.githubusercontent.com/u/56681566?u=8433ca2de983ec07b285adeea908804c8bc5bf76&v=4"
+    }
+   ],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-13T17:53:24Z",
+   "closedAt": "2026-11-15T14:31:47Z",
+   "updatedAt": "2026-11-15T14:31:47Z"
+  },
+  {
+   "number": 91,
+   "title": "Cacher les pages de développement en production",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/91",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": "Feature",
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "good first issue",
+    "front"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-14T09:00:21Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T11:41:48Z"
+  },
+  {
+   "number": 92,
+   "title": "Maquette de la page principale de la carte",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/92",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T11:11:59Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T11:11:59Z"
+  },
+  {
+   "number": 93,
+   "title": "Modèle des événements d'une opération",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/93",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "niveau-2",
+    "back",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    5
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T14:48:43Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T14:48:43Z"
+  },
+  {
+   "number": 94,
+   "title": "Enquête : quels événements le journal de bord publie-t-il, et sous quelle forme ?",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/94",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "niveau-2",
+    "data"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T14:48:45Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T14:48:45Z"
+  },
+  {
+   "number": 95,
+   "title": "Maquette de la fiche d'une opération",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/95",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T17:59:30Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T17:59:30Z"
+  },
+  {
+   "number": 96,
+   "title": "Maquette du disclaimer familles",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/96",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 18,
+   "labels": [
+    "niveau-2",
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [
+    18
+   ],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:01:21Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:02:18Z"
+  },
+  {
+   "number": 97,
+   "title": "Maquette du bilan cumulé",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/97",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:03:27Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:03:27Z"
+  },
+  {
+   "number": 98,
+   "title": "Maquette du logbook amélioré et du glossaire",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/98",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:05:51Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:05:51Z"
+  },
+  {
+   "number": 99,
+   "title": "Maquette de la recherche d'un événement",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/99",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:08:31Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:08:36Z"
+  },
+  {
+   "number": 100,
+   "title": "Maquette de la version arabe",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/100",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:10:37Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:10:37Z"
+  },
+  {
+   "number": 101,
+   "title": "Maquette du lien vers le cadre réglementaire et politique",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/101",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:11:51Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:11:51Z"
+  },
+  {
+   "number": 102,
+   "title": "Intentions graphiques à partir de la charte",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/102",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 77,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:13:30Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:13:30Z"
+  },
+  {
+   "number": 103,
+   "title": "Base du design system",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/103",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 77,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:14:56Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:14:56Z"
+  },
+  {
+   "number": 104,
+   "title": "Maquettes du back office et de la gestion des données",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/104",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "design"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:16:41Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:16:41Z"
+  },
+  {
+   "number": 105,
+   "title": "Interview plaidoyer SOS MEDITERRANEE",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/105",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 13,
+   "labels": [
+    "design",
+    "UX research"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:18:51Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:18:51Z"
+  },
+  {
+   "number": 106,
+   "title": "Interview journaliste II",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/106",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 12,
+   "labels": [
+    "design",
+    "UX research"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:20:27Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:20:27Z"
+  },
+  {
+   "number": 107,
+   "title": "Interview étudiants",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/107",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "design",
+    "UX research"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:21:33Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:21:33Z"
+  },
+  {
+   "number": 108,
+   "title": "Interview sur le process data management",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/108",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": 11,
+   "labels": [
+    "design",
+    "UX research"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:22:22Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:22:22Z"
+  },
+  {
+   "number": 109,
+   "title": "Mise à jour et compléments des personas",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/issues/109",
+   "state": "OPEN",
+   "stateReason": null,
+   "type": null,
+   "status": "Refinement",
+   "size": null,
+   "iteration": null,
+   "milestone": null,
+   "parent": null,
+   "labels": [
+    "design",
+    "UX research"
+   ],
+   "assignees": [],
+   "blockedBy": [],
+   "subs": {
+    "total": 0,
+    "completed": 0
+   },
+   "createdAt": "2026-11-15T18:23:42Z",
+   "closedAt": null,
+   "updatedAt": "2026-11-15T18:23:42Z"
+  }
+ ],
+ "pulls": [
+  {
+   "number": 10,
+   "title": "feat: socle du projet en FastAPI, React et Postgres",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/10",
+   "state": "MERGED",
+   "createdAt": "2026-11-04T17:46:36Z",
+   "mergedAt": "2026-11-06T10:45:27Z",
+   "author": "guillaume-flambard",
+   "closes": [
+    25
+   ]
+  },
+  {
+   "number": 31,
+   "title": "docs: ajoute SECURITY.md",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/31",
+   "state": "MERGED",
+   "createdAt": "2026-11-05T20:40:07Z",
+   "mergedAt": "2026-11-13T15:58:52Z",
+   "author": "sam-batouk",
+   "closes": []
+  },
+  {
+   "number": 42,
+   "title": "fix: corriger cinq points relevés à la relecture du socle",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/42",
+   "state": "MERGED",
+   "createdAt": "2026-11-06T10:49:54Z",
+   "mergedAt": "2026-11-06T16:43:12Z",
+   "author": "guillaume-flambard",
+   "closes": [
+    41
+   ]
+  },
+  {
+   "number": 44,
+   "title": "refactor: passer le code du socle en anglais",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/44",
+   "state": "MERGED",
+   "createdAt": "2026-11-06T14:33:05Z",
+   "mergedAt": "2026-11-06T16:47:05Z",
+   "author": "guillaume-flambard",
+   "closes": [
+    43
+   ]
+  },
+  {
+   "number": 46,
+   "title": "chore(deps): bump oxlint from 1.90.0 to 1.91.0 in /frontend in the frontend group across 1 directory",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/46",
+   "state": "MERGED",
+   "createdAt": "2026-11-06T16:44:24Z",
+   "mergedAt": "2026-11-12T13:52:36Z",
+   "author": "dependabot",
+   "closes": []
+  },
+  {
+   "number": 48,
+   "title": "fix: corriger les petits défauts du socle avant l'arrivée des bénévoles",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/48",
+   "state": "MERGED",
+   "createdAt": "2026-11-09T10:39:55Z",
+   "mergedAt": "2026-11-12T20:30:32Z",
+   "author": "guillaume-flambard",
+   "closes": [
+    47
+   ]
+  },
+  {
+   "number": 50,
+   "title": "docs: ouvrir l'espace pocs/ pour les essais des bénévoles",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/50",
+   "state": "MERGED",
+   "createdAt": "2026-11-10T10:28:14Z",
+   "mergedAt": "2026-11-12T20:30:17Z",
+   "author": "guillaume-flambard",
+   "closes": [
+    49
+   ]
+  },
+  {
+   "number": 78,
+   "title": "chore(deps): bump amannn/action-semantic-pull-request from 6.1.1 to 6.1.2 in the actions group",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/78",
+   "state": "MERGED",
+   "createdAt": "2026-11-12T20:31:24Z",
+   "mergedAt": "2026-11-13T08:17:27Z",
+   "author": "dependabot",
+   "closes": []
+  },
+  {
+   "number": 79,
+   "title": "chore(deps): bump https://github.com/astral-sh/ruff-pre-commit from v0.17.3 to 0.17.4 in the pre-commit group",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/79",
+   "state": "MERGED",
+   "createdAt": "2026-11-12T20:31:34Z",
+   "mergedAt": "2026-11-13T08:17:34Z",
+   "author": "dependabot",
+   "closes": []
+  },
+  {
+   "number": 80,
+   "title": "chore(deps): bump ruff from 0.17.3 to 0.17.4 in /backend in the backend group",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/80",
+   "state": "MERGED",
+   "createdAt": "2026-11-12T20:32:18Z",
+   "mergedAt": "2026-11-13T08:17:40Z",
+   "author": "dependabot",
+   "closes": []
+  },
+  {
+   "number": 81,
+   "title": "chore(deps): bump the frontend group in /frontend with 6 updates",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/81",
+   "state": "MERGED",
+   "createdAt": "2026-11-12T20:32:29Z",
+   "mergedAt": "2026-11-13T08:17:45Z",
+   "author": "dependabot",
+   "closes": []
+  },
+  {
+   "number": 84,
+   "title": "feat: add the design system page",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/84",
+   "state": "MERGED",
+   "createdAt": "2026-11-13T16:11:59Z",
+   "mergedAt": "2026-11-13T16:31:00Z",
+   "author": "naderhaj",
+   "closes": [
+    7
+   ]
+  },
+  {
+   "number": 86,
+   "title": "docs: renvoyer vers le design system depuis CONTRIBUTING",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/86",
+   "state": "MERGED",
+   "createdAt": "2026-11-13T17:38:48Z",
+   "mergedAt": "2026-11-15T14:31:17Z",
+   "author": "guillaume-flambard",
+   "closes": [
+    85
+   ]
+  },
+  {
+   "number": 88,
+   "title": "docs: mettre CONTRIBUTING et TECHNICAL à jour des décisions",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/88",
+   "state": "MERGED",
+   "createdAt": "2026-11-13T17:54:05Z",
+   "mergedAt": "2026-11-15T14:31:45Z",
+   "author": "guillaume-flambard",
+   "closes": [
+    87
+   ]
+  },
+  {
+   "number": 89,
+   "title": "feat: generate fictive data",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/89",
+   "state": "OPEN",
+   "createdAt": "2026-11-13T21:00:36Z",
+   "mergedAt": null,
+   "author": "NicolasGrosjean",
+   "closes": [
+    4
+   ]
+  },
+  {
+   "number": 90,
+   "title": "test: run backend tests on Postgres in CI",
+   "url": "https://github.com/dataforgoodfr/mediterranean-rescue/pull/90",
+   "state": "MERGED",
+   "createdAt": "2026-11-14T08:57:51Z",
+   "mergedAt": "2026-11-15T14:30:36Z",
+   "author": "naderhaj",
+   "closes": [
+    75
+   ]
+  }
+ ]
+}

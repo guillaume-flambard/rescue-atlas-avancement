@@ -1,0 +1,17 @@
+---
+import { ORDER, STATUS, counts, type Issue } from "../lib/model";
+
+interface Props { list: Issue[]; thin?: boolean; legend?: boolean; style?: string }
+const { list, thin = false, legend = false, style } = Astro.props;
+const c = counts(list);
+const n = list.length || 1;
+const shown = ORDER.filter((k) => c[k]);
+---
+<div class:list={["bar", { thin }]} style={style} role="img" aria-label={shown.map((k) => `${c[k]} ${STATUS[k].plural}`).join(", ")}>
+  {shown.map((k, ix) => <i style={`width:${(100 * c[k]) / n}%;background:${STATUS[k].hex};animation-delay:${ix * 60}ms`} />)}
+</div>
+{legend && (
+  <ul class="legend">
+    {shown.map((k) => <li style={`--c:${STATUS[k].hex}`}><b>{c[k]}</b>{STATUS[k].plural}</li>)}
+  </ul>
+)}

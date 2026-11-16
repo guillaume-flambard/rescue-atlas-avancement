@@ -1,0 +1,44 @@
+# Refait la photo de GitHub toutes les heures et publie le site sur GitHub Pages.
+# Modèle : https://docs.astro.build/en/guides/deploy/github/
+name: Publier l'avancement
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Photo du tableau et du dépôt
+        env:
+          # Le GITHUB_TOKEN d'une Action ne lit pas le tableau d'une organisation (doc GitHub) :
+          # sans le secret PROJECT_TOKEN, on garde le data.json du dépôt.
+          GH_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+        run: |
+          if [ -n "$GH_TOKEN" ]; then python3 scripts/snapshot.py src/data/data.json; else echo "Pas de PROJECT_TOKEN : data.json du dépôt"; fi
+      - uses: withastro/action@v6
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publier sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

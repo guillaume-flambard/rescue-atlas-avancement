@@ -7,11 +7,21 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "snapshot": "python3 scripts/snapshot.py src/data/data.json",
+    "test": "vitest run",
+    "check": "astro check",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.4.12"
+    "astro": "^7.4.12",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/three": "^0.187.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.0"
   }
 }

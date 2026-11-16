@@ -1,0 +1,18 @@
+---
+import { STATUS, statusOf, type Issue } from "../lib/model";
+
+interface Props { issue: Issue; filterable?: boolean }
+const { issue: i, filterable = false } = Astro.props;
+const s = STATUS[statusOf(i)];
+const who = i.assignees.map((a) => a.login).join(", ");
+---
+<li class="row" style={`--c:${s.hex};--c-text:${s.text}`} data-ms={filterable ? (i.milestone ?? "") : undefined} data-it={filterable ? (i.iteration ?? "") : undefined}>
+  <span class="t"><a href={i.url}>#{i.number} {i.title}</a></span>
+  <span class="st">{s.label}</span>
+  <span class="meta">{who ? `Avec ${who}` : "Personne dessus pour l'instant"}</span>
+  {i.assignees.length > 0 && (
+    <span class="people">
+      {i.assignees.map((a) => <img src={`${a.avatar}&s=48`} alt={a.login} title={a.login} width="22" height="22" loading="lazy" />)}
+    </span>
+  )}
+</li>

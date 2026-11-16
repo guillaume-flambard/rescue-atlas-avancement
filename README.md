@@ -1,43 +1,28 @@
-# Astro Starter Kit: Minimal
+# Rescue Atlas, l'avancement
 
-```sh
-npm create astro@latest -- --template minimal
+Une page pour suivre où en est [Rescue Atlas](https://github.com/dataforgoodfr/mediterranean-rescue) sans lire GitHub : l'objectif du moment, les jalons, le sprint, les grands chantiers, ce qui a bougé dans la semaine, et une carte 3D de toutes les tâches.
+
+En ligne : https://guillaume-flambard.github.io/rescue-atlas-avancement/
+
+Les statuts sont les colonnes du [tableau de l'équipe](https://github.com/orgs/dataforgoodfr/projects/44). Une tâche fermée compte comme faite, une tâche fermée comme « pas prévue » ne compte pas.
+
+## Comment c'est fait
+
+- **Astro** génère une page statique. Les chiffres sont calculés au build, dans `src/lib/model.ts`.
+- **`scripts/snapshot.py`** lit le dépôt et le tableau avec `gh` et écrit `src/data/data.json`.
+- **La carte 3D** est en Three.js (`src/scripts/scene.ts`), chargée seulement quand on arrive dessus. Sur téléphone, la liste s'affiche d'abord.
+- **`.github/workflows/deploy.yml`** refait la photo toutes les heures et publie sur GitHub Pages. Le tableau d'une organisation ne se lit pas avec le `GITHUB_TOKEN` d'une Action ([doc GitHub](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions)) : il faut un secret `PROJECT_TOKEN`. Sans lui, le site publie le `data.json` du dépôt.
+
+## Commandes
+
+```bash
+npm install
+npm run snapshot   # nouvelle photo de GitHub (gh connecté)
+npm run dev        # http://localhost:4321/rescue-atlas-avancement/
+npm test           # Vitest
+npm run build      # astro check, puis le site dans dist/
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Lien direct vers la fiche d'une tâche : `#tache-5`.
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Document de travail · bénévoles Data for Good · non validé par SOS MEDITERRANEE

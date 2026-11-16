@@ -1,5 +1,8 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-// https://astro.build/config
-export default defineConfig({});
+// Publiée sur GitHub Pages : https://guillaume-flambard.github.io/rescue-atlas-avancement
+export default defineConfig({
+  site: "https://guillaume-flambard.github.io",
+  base: "/rescue-atlas-avancement",
+});
